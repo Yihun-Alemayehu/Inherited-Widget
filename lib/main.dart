@@ -2,15 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -18,8 +11,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: ApiProvider(api: Api(), child: const HomePage()),
-    );
-  }
+    ),
+  );
 }
 
 class HomePage extends StatefulWidget {
